@@ -227,8 +227,30 @@
             document.getElementById('footer-counter')?.appendChild(counter);
         }
 
-        fetch('about.json')
-            .then((response) => response.json())
+        async function loadAboutData() {
+            const candidates = [
+                new URL('./about.json', window.location.href),
+                new URL('about.json', window.location.origin + window.location.pathname),
+                new URL('../about.json', window.location.href)
+            ];
+
+            for (const url of candidates) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        continue;
+                    }
+
+                    return await response.json();
+                } catch (error) {
+                    console.warn(`Failed to load about.json from ${url}`, error);
+                }
+            }
+
+            throw new Error('Failed to load about.json');
+        }
+
+        loadAboutData()
             .then((data) => {
                 setProfile(data.profile);
                 renderAbout(document.getElementById('about'), data.about);
