@@ -7,16 +7,6 @@
       "I recently completed a Master of Science in Information Management with a Data Science specialization at the University of Washington, where I focused on machine learning systems, agentic AI architectures, and large-scale data analysis.",
       "This site highlights my research, engineering projects, and professional experience across AI startups, large-scale enterprise systems, and data-driven product development."
     ],
-    "links": [
-      {
-        "label": "Resume",
-        "url": "Kevin_Loving_Resume.pdf"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://linkedin.com/in/kevin-loving"
-      }
-    ],
     "counter": "👁️ Visitors: 0001337"
   },
   "skills": {
@@ -194,7 +184,7 @@
         "url": "mailto:kmloving@live.com"
       },
       {
-        "label": "Resume PDF",
+        "label": "Resume",
         "url": "Kevin_Loving_Resume.pdf"
       },
       {

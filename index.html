@@ -86,7 +86,7 @@
             font-size: 2.5em;
             color: #4169E1;
             margin-bottom: 10px;
-            font-family: 'Arial Black', sans-serif;
+            font-family: 'Trebuchet MS', Verdana, sans-serif;
         }
 
         .tagline {
@@ -393,6 +393,7 @@
         <table class="footer-table">
             <tr>
                 <td>
+                    <div id="footer-counter"></div>
                     <p>© 2026 Kevin Loving | Last Updated: February 2026</p>
                     <p>Best viewed at 800x600 resolution</p>
                     <p style="font-size: 0.8em;">
@@ -445,7 +446,7 @@
             const counter = document.createElement('div');
             counter.className = 'counter';
             counter.textContent = data.counter;
-            cell.appendChild(counter);
+            document.getElementById('footer-counter')?.appendChild(counter);
         }
 
         function renderEducation(section, data) {
