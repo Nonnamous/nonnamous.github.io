@@ -295,17 +295,20 @@ li {
 .flavor-text {
     margin: -2px 0 18px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     font-weight: bold;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: transparent;
-    background: linear-gradient(90deg, #ff4d6d, #ffb703, #00b4d8, #8338ec, #ff4d6d);
-    background-size: 220% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-shadow: 0 0 10px rgba(255, 183, 3, 0.25);
+    font-family: "Comic Sans MS", "Marker Felt", "Trebuchet MS", cursive;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    color: #fff7ff;
+    -webkit-text-stroke: 1px #b8477b;
+    text-shadow:
+        1px 1px 0 #b8477b,
+        3px 3px 0 rgba(255, 183, 3, 0.55),
+        0 0 8px rgba(255, 255, 255, 0.4);
     animation: flavor-shift 4.5s linear infinite;
+    transform: skewX(-8deg);
 }
 
 .button-table {
@@ -347,6 +350,9 @@ li {
 .sidebar-menu {
     position: sticky;
     top: 82px;
+    justify-self: start;
+    width: min(100%, 240px);
+    text-align: left;
 }
 
 .sidebar-panel {
@@ -400,7 +406,7 @@ li {
 .sidebar-button,
 .sidebar-button:visited {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 8px 12px;
 }
 
@@ -480,6 +486,28 @@ li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
+}
+
+.interest-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.interest-group {
+    padding: 16px;
+    border: 2px inset var(--border-soft);
+    background:
+        linear-gradient(180deg, rgba(65, 105, 225, 0.07), transparent 36%),
+        #fcfcf5;
+}
+
+.interest-group h3 {
+    margin-top: 0;
+}
+
+.interest-group ul {
+    margin-bottom: 0;
 }
 
 .writing-card {
@@ -623,8 +651,9 @@ li {
 }
 
 @keyframes flavor-shift {
-    0% { background-position: 0% center; }
-    100% { background-position: 220% center; }
+    0% { color: #fff7ff; }
+    50% { color: #ffe7f4; }
+    100% { color: #fff7ff; }
 }
 
 @media (max-width: 768px) {
@@ -638,6 +667,7 @@ li {
 
     .sidebar-menu {
         position: static;
+        width: 100%;
     }
 
     .navbar td {

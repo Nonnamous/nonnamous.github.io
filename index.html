@@ -56,7 +56,7 @@
                     </tr>
                 </table>
 
-                <div class="flavor-text" aria-hidden="true">wow!! signal boost incoming...</div>
+                <div class="flavor-text" aria-hidden="true">signal boost!</div>
 
                 <!-- Current Work Section -->
                 <table class="section-table" id="current-work">
@@ -65,7 +65,7 @@
                     </tr>
                 </table>
 
-                <div class="flavor-text" aria-hidden="true">behold: active projects in motion</div>
+                <div class="flavor-text" aria-hidden="true">in motion!</div>
 
                 <!-- Interests Section -->
                 <table class="section-table" id="interests">
@@ -74,7 +74,7 @@
                     </tr>
                 </table>
 
-                <div class="flavor-text" aria-hidden="true">neat!! research rabbit holes ahead</div>
+                <div class="flavor-text" aria-hidden="true">rabbit holes!</div>
 
                 <!-- Opportunities Section -->
                 <table class="section-table" id="opportunities">
@@ -164,6 +164,28 @@
             cell.appendChild(createList(data[key]));
         }
 
+        function renderGroupedInterests(section, data) {
+            const cell = section.querySelector('td');
+            cell.innerHTML = `<h2>${data.title}</h2>`;
+
+            const grid = document.createElement('div');
+            grid.className = 'interest-groups';
+
+            data.groups.forEach((group) => {
+                const card = document.createElement('section');
+                card.className = 'interest-group';
+
+                const heading = document.createElement('h3');
+                heading.textContent = group.label;
+                card.appendChild(heading);
+
+                card.appendChild(createList(group.items));
+                grid.appendChild(card);
+            });
+
+            cell.appendChild(grid);
+        }
+
         function renderFooter(data) {
             const counter = document.createElement('div');
             counter.className = 'counter';
@@ -199,7 +221,7 @@
                 setProfile(data.profile);
                 renderAbout(document.getElementById('about'), data.about);
                 renderItemList(document.getElementById('current-work'), data.current_work, 'items');
-                renderListSection(document.getElementById('interests'), data.interests, 'areas');
+                renderGroupedInterests(document.getElementById('interests'), data.interests);
                 renderListSection(document.getElementById('opportunities'), data.opportunities, 'items');
                 renderFooter(data.footer);
             })

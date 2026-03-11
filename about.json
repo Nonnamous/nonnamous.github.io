@@ -33,27 +33,44 @@
 
   "interests": {
     "title": "research interests",
-    "areas": [
-      "AI in Video Games and Simulated Environments",
-      "Multi-Agent Systems",
-      "Embodied AI and Robotics",
-      "Autonomous AI Agents",
-      "World Modeling and Planning",
-      "Scalable ML Infrastructure",
-      "AI Safety and Agent Reliability",
-      "AI for Accessibility and Assistive Technologies",
-      "ADHD and Neurodiversity in the Workplace",
-      "Philosophy of Ethical AI"
+    "groups": [
+      {
+        "label": "Agent Systems",
+        "items": [
+          "Multi-Agent Systems",
+          "Autonomous AI Agents",
+          "World Modeling and Planning",
+          "AI Safety and Agent Reliability"
+        ]
+      },
+      {
+        "label": "Embodied and Simulated AI",
+        "items": [
+          "AI in Video Games and Simulated Environments",
+          "Embodied AI and Robotics"
+        ]
+      },
+      {
+        "label": "Infrastructure and Applied AI",
+        "items": [
+          "Scalable ML Infrastructure",
+          "AI for Accessibility and Assistive Technologies"
+        ]
+      },
+      {
+        "label": "Social and Ethical Questions",
+        "items": [
+          "ADHD and Neurodiversity in the Workplace",
+          "Philosophy of Ethical AI"
+        ]
+      }
     ]
   },
 
   "opportunities": {
-    "title": "open to",
+    "title": "collaborating",
     "items": [
-      "PhD programs focused on machine learning systems or multi-agent AI",
-      "Research collaborations involving agentic AI or autonomous systems",
-      "Early-stage startups building advanced AI infrastructure",
-      "Technical advising for AI-driven products"
+      "If you're interested in collaborating, reach out when you want someone who can help turn rough ideas into working systems, think rigorously about hard problems, and contribute across both technical implementation and written communication. I'm especially interested in collaborations around software projects, research-inspired work, and interdisciplinary ideas that benefit from both engineering depth and curiosity."
     ]
   },
 
